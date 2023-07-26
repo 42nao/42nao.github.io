@@ -1,0 +1,103 @@
+:root {
+    --text-color: #fff;
+    --main-color: #ff4d4d;
+    --main-color-rgb: 255, 77, 77;
+    --font: 'Jetbrains Mono', monospace;
+    --background-color: #131313;
+}
+
+html,
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font);
+}
+
+
+.main {
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .pfp {
+    width: 125px;
+    height: 125px;
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(to right, #e53935, #e35d5b) border-box;
+    border-radius: 50em;
+    border: 4px solid transparent;
+    margin-bottom: 1rem;
+}
+
+
+.main .title {
+    color: var(--main-color);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.main .skills {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-bottom: 4rem;
+}
+
+.main .itemrow .item {
+    padding: 20px;
+    width: 100%;
+    margin-inline: 2%;
+    border-radius: 15px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: 0.25s ease-in-out;
+}
+
+.main .itemrow .item:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: 0.25s ease-in-out;
+}
+
+
+@media screen and (max-width: 600px) {
+    .main .itemrow .item {
+        width: inherit;
+    }
+}
+
+.main .itemrow .item h1 {
+    color: var(--main-color);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.main .itemrow .item .socials {
+    display: flex;
+    flex-direction: row;
+}
+
+.main .itemrow .item .socials .sitem {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.main .itemrow .item .socials .sitem:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.5s ease-in-out;
+}
+
+
+footer {
+    margin-top: 17.5vh;
+    margin-bottom: 2rem;
+    text-align: center;
+}
