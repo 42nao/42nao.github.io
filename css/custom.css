@@ -1,9 +1,10 @@
 :root {
-    --text-color: #fff;
-    --main-color: #ff4d4d;
+    --text-color: #000;
+    --main-color: rgb(255, 77, 77);
     --main-color-rgb: 255, 77, 77;
-    --font: 'Jetbrains Mono', monospace;
-    --background-color: #131313;
+    --font-text: 'Poppins', sans-serif;
+    --font: 'Space Grotesk', sans-serif;
+    --background-color: #fff;
 }
 
 html,
@@ -15,47 +16,36 @@ body {
 
 
 .main {
-    margin-top: 10%;
+    margin-top: 5%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.main .pfp {
-    width: 125px;
-    height: 125px;
-    background: linear-gradient(white, white) padding-box,
-        linear-gradient(to right, #e53935, #e35d5b) border-box;
-    border-radius: 50em;
-    border: 4px solid transparent;
-    margin-bottom: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 
 .main .title {
-    color: var(--main-color);
-    font-size: 3.5rem;
+    color: var(--text-color);
+    font-family: var(--font-text);
+    font-size: 7rem;
     font-weight: 700;
-    margin-bottom: 0;
 }
 
 .main .skills {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 400;
-    margin-top: 0.5rem;
-    margin-bottom: 4rem;
+    margin-top: 0.2rem;
 }
 
 .main .itemrow .item {
-    padding: 20px;
     width: 100%;
-    margin-inline: 2%;
     border-radius: 15px;
     background-color: var(--background-color);
     color: var(--text-color);
     transition: 0.25s ease-in-out;
+    margin-bottom: 2rem;
+    font-size: 17.5px;
 }
 
 .main .itemrow .item:hover {
@@ -72,32 +62,35 @@ body {
 }
 
 .main .itemrow .item h1 {
-    color: var(--main-color);
-    font-size: 2rem;
+    font-family: var(--font-text);
+    color: var(--text-color);
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
-.main .itemrow .item .socials {
+.main .socials {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
 }
 
-.main .itemrow .item .socials .sitem {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+.main .socials .sitem {
     padding: 10px;
     margin-right: 10px;
-    transition: 0.5s ease-in-out;
 }
 
-.main .itemrow .item .socials .sitem:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: 0.5s ease-in-out;
+
+@media screen and (max-width: 1000px) {
+    .main iframe {
+        width: 90px;
+    }
 }
 
 
 footer {
-    margin-top: 17.5vh;
+    margin-top: 7vh;
     margin-bottom: 2rem;
     text-align: center;
 }
