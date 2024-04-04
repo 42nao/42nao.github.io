@@ -94,3 +94,7 @@ footer {
     margin-bottom: 2rem;
     text-align: center;
 }
+
+footer p {
+    margin-right: 10px;
+}
