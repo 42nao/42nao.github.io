@@ -1,0 +1,59 @@
+.shape {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(
+    64.00916346799386deg,
+    var(--accent-color) 23.44140625%,
+    var(--accent-color) 23.44140625%,
+    var(--accent-color) 79.84765625%
+  );
+  animation: wave 4s ease-in-out infinite;
+  &:nth-of-type(2) {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: -200px;
+    left: -400px;
+    opacity: 0.1;
+    z-index: -1;
+  }
+  &:nth-of-type(3) {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    opacity: 0.1;
+    z-index: -1;
+  }
+}
+@keyframes wave {
+  0%,
+  100% {
+    border-radius: 70% 30% 72% 28% / 27% 61% 39% 73%;
+  }
+  50% {
+    border-radius: 77% 23% 54% 46% / 40% 38% 62% 60%;
+  }
+}
+
+/* 
+old: 
+    rgba(243, 72, 104, 1) 23.44140625%,
+    rgba(242, 71, 104, 1) 23.44140625%,
+    rgba(158, 0, 236, 1) 79.84765625%
+*/
+
+.codeobj {
+  animation: MoveUpDown 3s linear infinite;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    padding-top: 0;
+  }
+  50% {
+    padding-top: 10px;
+  }
+}
